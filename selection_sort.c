@@ -7,6 +7,8 @@ int main(){
         printf("%d element of tha array",(i+1));
         scanf("%d",&arr[i]);
     }
+    
+    
     for(i=0;i<size;++i){
         small=i;
         for(j=i+1;j<size;++j){
@@ -16,7 +18,12 @@ int main(){
         }
         temp=arr[i];
         arr[i]=arr[small];
-        arr[small]=arr[i];
+        arr[small]=temp;
+        
+    }
+    //display
+    for(i=0;i<size;++i){
+        printf("%d ",arr[i]);
     }
     return 0;
 }
